@@ -22,3 +22,7 @@ Set scroll speed:
 `sudo xinput list`
 `xinput list-props '21' | grep -i scroll`
 `xinput set-prop 21 "libinput Scrolling Pixel Distance" 290`
+
+### Karabiner
+
+Edit `~/.config/karabiner/karabiner.json`
