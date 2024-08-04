@@ -16,3 +16,9 @@ https://askubuntu.com/questions/482678/how-to-add-a-new-keyboard-layout-custom-k
 
 ### VSCode
 
+### Touchpad
+
+Set scroll speed:
+`sudo xinput list`
+`xinput list-props '21' | grep -i scroll`
+`xinput set-prop 21 "libinput Scrolling Pixel Distance" 290`

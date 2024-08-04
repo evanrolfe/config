@@ -1,74 +1,121 @@
 {
-  "security.workspace.trust.untrustedFiles": "open",
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.diagnosticMode": "workspace",
-  "editor.fontSize": 12,
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
-  "search.quickOpen.includeHistory": false,
-  "search.smartCase": true,
-  "editor.minimap.enabled": false,
-  "window.title": "${dirty}${activeEditorLong}${separator}${rootName}${separator}${appName}",
-  "editor.rulers": [
-    100,
-    120
-  ],
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.startupEditor": "newUntitledFile",
-  "explorer.autoReveal": false,
-  "editor.matchBrackets": "never",
-  "workbench.editor.focusRecentEditorAfterClose": false,
-  "workbench.colorCustomizations": {
-    "terminal.foreground": "#EEEEEC",
-    "terminal.background": "#4A4A4A",
-    "terminal.ansiBlack": "#2E3436",
-    "terminal.ansiBrightBlack": "#555753",
-    "terminal.ansiRed": "#EE4747",
-    "terminal.ansiBrightRed": "#DF9A9A",
-    "terminal.ansiGreen": "#4E9A06",
-    "terminal.ansiBrightGreen": "#8AE234",
-    "terminal.ansiYellow": "#C4A000",
-    "terminal.ansiBrightYellow": "#FCE94F",
-    "terminal.ansiBlue": "#3465A4",
-    "terminal.ansiBrightBlue": "#729FCF",
-    "terminal.ansiMagenta": "#75507B",
-    "terminal.ansiBrightMagenta": "#AD7FA8",
-    "terminal.ansiCyan": "#06989A",
-    "terminal.ansiBrightCyan": "#34E2E2",
-    "terminal.ansiWhite": "#D3D7CF",
-    "terminal.ansiBrightWhite": "#EEEEEC",
-    "terminalCursor.foreground": "#EEEEEC",
-    "terminalCursor.background": "#2E3436",
-  },
-  "window.newWindowDimensions": "inherit",
-  "files.associations": {
-    "*.tf": "tf"
-  },
-  "editor.tabSize": 2,
-  "keyboard.dispatch": "keyCode",
-  "[javascript]": {
-    "editor.tabSize": 2
-  },
-  "[python]": {
+    "security.workspace.trust.untrustedFiles": "open",
+    "python.defaultInterpreterPath": "venv/bin/python",
+    "python.autoComplete.extraPaths": [
+        "venv/lib/python3.11/site-packages/"
+    ],
+    "python.analysis.extraPaths": [
+        "src"
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportUnknownMemberType": "none"
+    },
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.formatOnType": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[css]": {
+        "editor.formatOnType": false,
+        "editor.formatOnSave": false,
+    },
+    "black-formatter.path": [
+        "venv/bin/black"
+    ],
+    "black-formatter.interpreter": [
+        "venv/bin/python"
+    ],
+    "black-formatter.args": [
+        "-l 120"
+    ],
+    "editor.fontSize": 13,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "search.quickOpen.includeHistory": false,
+    "search.smartCase": true,
+    "window.title": "${dirty}${activeEditorLong}${separator}${rootName}${separator}${appName}",
+    "editor.rulers": [
+        100,
+        120
+    ],
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.autoReveal": false,
+    "editor.matchBrackets": "never",
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "workbench.colorCustomizations": {
+        "terminal.foreground": "#EEEEEC",
+        "terminal.background": "#4A4A4A",
+        "terminal.ansiBlack": "#2E3436",
+        "terminal.ansiBrightBlack": "#555753",
+        "terminal.ansiRed": "#EE4747",
+        "terminal.ansiBrightRed": "#DF9A9A",
+        "terminal.ansiGreen": "#4E9A06",
+        "terminal.ansiBrightGreen": "#8AE234",
+        "terminal.ansiYellow": "#C4A000",
+        "terminal.ansiBrightYellow": "#FCE94F",
+        "terminal.ansiBlue": "#3465A4",
+        "terminal.ansiBrightBlue": "#729FCF",
+        "terminal.ansiMagenta": "#75507B",
+        "terminal.ansiBrightMagenta": "#AD7FA8",
+        "terminal.ansiCyan": "#06989A",
+        "terminal.ansiBrightCyan": "#34E2E2",
+        "terminal.ansiWhite": "#D3D7CF",
+        "terminal.ansiBrightWhite": "#EEEEEC",
+        "terminalCursor.foreground": "#EEEEEC",
+        "terminalCursor.background": "#2E3436",
+    },
+    "window.newWindowDimensions": "inherit",
+    "files.associations": {
+        "*.tf": "tf",
+        "*.proto": "go",
+        "*.ui": "xml",
+        "*.qss": "css"
+    },
     "editor.tabSize": 4,
-    "editor.formatOnType": true
-  },
-  "[go]": {
-    "editor.tabSize": 4,
-    "editor.insertSpaces": false
-  },
-  "editor.codeActionsOnSave": [
-    "source.organizeImports"
-  ],
-  "workbench.colorTheme": "Bluloco Light",
-  "editor.formatOnSave": true,
-  "editor.inlineSuggest.enabled": true,
-  "C_Cpp.clang_format_fallbackStyle": "{ ColumnLimit: 0 }",
-  "[c]": {
-    "editor.wordBasedSuggestions": false,
-    "editor.suggest.insertMode": "replace",
-    "editor.semanticHighlighting.enabled": true,
-    "editor.codeActionsOnSave": [],
-    "editor.formatOnSave": false
-  }
+    "keyboard.dispatch": "keyCode",
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[go]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false
+    },
+    "[cpp]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false
+    },
+    "editor.codeActionsOnSave": [
+        "source.organizeImports"
+    ],
+    "editor.formatOnSave": true,
+    "editor.inlineSuggest.enabled": true,
+    "[c]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.codeActionsOnSave": [],
+        "editor.formatOnSave": false
+    },
+    "workbench.colorTheme": "Bluloco Light",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.iconTheme": "Monokai Classic Icons",
+    "C_Cpp.default.includePath": [
+        "/usr/include/x86_64-linux-gnu/qt6/**",
+        "${workspaceFolder}/build/**",
+        "${workspaceFolder}/src/**"
+    ],
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.errorSquiggles": "enabled",
+    "editor.indentSize": "tabSize",
+    "editor.detectIndentation": false,
+    "mojo.onSettingsChanged": "restart",
+    "codechecker.executor.executablePath": "codechecker",
+    "extensions.ignoreRecommendations": true,
+    "editor.minimap.enabled": false
 }
