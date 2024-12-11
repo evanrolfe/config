@@ -23,6 +23,7 @@ https://askubuntu.com/questions/482678/how-to-add-a-new-keyboard-layout-custom-k
 3. Add keyboard in setings
 
 ### VSCode
+Ubuntu: (replace cmd=>ctrl) and set: `~/.config/Code/User/settings.json`, `~/.config/Code/User/keybindings.json`
 
 ### Touchpad
 
